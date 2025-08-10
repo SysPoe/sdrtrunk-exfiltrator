@@ -74,7 +74,6 @@ Several Python tools are included for testing and development:
 
 - **`zmq_audio_consumer.py`**: Receives and processes audio messages, can save to WAV files
 - **`zmq_audio_producer.py`**: Test producer that simulates SDRTrunk audio messages
-- **`zmq_scanner.py`**: Scans for active ZMQ endpoints
 
 ### Consumer Usage
 ```bash
@@ -98,15 +97,6 @@ python3 zmq_audio_producer.py --endpoint tcp://*:15024 --interval 1.0 --verbose
 
 # Send limited number of test messages
 python3 zmq_audio_producer.py --count 10 --interval 0.5
-```
-
-### Port Scanner
-```bash
-# Scan default range (15023-15050)
-python3 zmq_scanner.py
-
-# Test specific endpoint
-python3 zmq_scanner.py --test-endpoint tcp://localhost:15023
 ```
 
 ## Integration Example
